@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Student Records</title>
+    <link rel="stylesheet" href="/assets/css/base-style.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/buttons.css">
+    <link rel="stylesheet" href="/assets/css/form.css">
+    <link rel="stylesheet" href="/assets/css/contact.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/assets/Images/collegelogo.jfif" alt="College Logo">
+                <span><a href="home.html">Student Portal</a></span>
+            </div>
+           
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="records.html" class="nav-link">Student Records</a></li>
+                <li><a href="add-student.html" class="nav-link">Add Student</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Contact Administration</h1>
+            <p class="page-subtitle">Get in touch with us for any queries or assistance</p>
+
+            <div class="contact-wrapper-new">
+                <!-- Contact Form -->
+                <section class="contact-form-section-new">
+                    <h2>Send us a Message</h2>
+                    <div id="contactFormMessage" class="form-message" style="display: none;"></div>
+                    
+                    <div class="contact-form-wrapper">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName" class="form-label">Your Name *</label>
+                                <input type="text" id="contactName" class="form-input" placeholder="Enter your full name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactEmail" class="form-label">Email Address *</label>
+                                <input type="email" id="contactEmail" class="form-input" placeholder="your.email@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactPhone" class="form-label">Phone Number</label>
+                                <input type="tel" id="contactPhone" class="form-input" placeholder="+91 98765 43210">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactSubject" class="form-label">Subject *</label>
+                                <select id="contactSubject" class="form-select" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Admission Query">Admission Query</option>
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Record Correction">Record Correction</option>
+                                    <option value="Feedback">Feedback</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage" class="form-label">Message *</label>
+                            <textarea id="contactMessage" class="form-textarea" rows="4" placeholder="Type your message here..." required></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary" onclick="submitContactForm()">Send Message</button>
+                            <button type="button" class="btn btn-secondary" onclick="resetContactForm()">Clear Form</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Information Cards -->
+                <aside class="contact-info-section-new">
+                    <article class="contact-info-card-compact" onclick="scrollToMap()" style="cursor: pointer;" title="Click to view map">
+                        <div class="contact-icon-compact">📍</div>
+                        <div class="contact-info-content">
+                            <h3>Visit Us</h3>
+                            <p>Aura Institute of Technology<br>
+                            123 University Avenue<br>
+                            Tech City, Tamil Nadu - 638502</p>
+                        </div>
+                    </article>
+
+                    <article class="contact-info-card-compact">
+                        <div class="contact-icon-compact">📞</div>
+                        <div class="contact-info-content">
+                            <h3>Call Us</h3>
+                            <p><strong>Main:</strong> +91 80 1234 5678<br>
+                            <strong>Admissions:</strong> +91 80 1234 5679<br>
+                            <strong>Support:</strong> +91 80 1234 5680</p>
+                        </div>
+                    </article>
+
+                    <article class="contact-info-card-compact">
+                        <div class="contact-icon-compact">✉️</div>
+                        <div class="contact-info-content">
+                            <h3>Email Us</h3>
+                            <p><strong>General:</strong> info@auracollege.edu<br>
+                            <strong>Admissions:</strong> admissions@auracollege.edu<br>
+                            <strong>Support:</strong> support@auracollege.edu</p>
+                        </div>
+                    </article>
+
+                    <article class="contact-info-card-compact">
+                        <div class="contact-icon-compact">🕒</div>
+                        <div class="contact-info-content">
+                            <h3>Office Hours</h3>
+                            <p><strong>Mon - Fri:</strong> 9:00 AM - 5:00 PM<br>
+                            <strong>Saturday:</strong> 9:00 AM - 1:00 PM<br>
+                            <strong>Sunday:</strong> Closed</p>
+                        </div>
+                    </article>
+
+                    <!-- Map -->
+                    <article class="contact-map-card" id="mapCard">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15634.476191457541!2d77.57939814761637!3d11.579143939077191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9479ffa3882f3%3A0xf13aa1aa9aded562!2sAnthiyur%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1763530111386!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="250" 
+                                style="border:0; border-radius: 8px;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </article>
+                </aside>
+            </div>
+
+            <!-- Department Contacts -->
+            <section class="department-contacts-section">
+                <h2>Department Contacts</h2>
+                <div class="department-contacts-grid">
+                    <article class="dept-contact-card">
+                        <h3>💻 Computer Science</h3>
+                        <p><strong>HOD:</strong> Dr. Rajesh Kumar</p>
+                        <p><strong>Email:</strong> cse@auracollege.edu</p>
+                        <p><strong>Phone:</strong> +91 80 1234 5681</p>
+                    </article>
+                    <article class="dept-contact-card">
+                        <h3>⚡ Electronics</h3>
+                        <p><strong>HOD:</strong> Dr. Priya</p>
+                        <p><strong>Email:</strong> ece@auracollege.edu</p>
+                        <p><strong>Phone:</strong> +91 80 1234 5682</p>
+                    </article>
+                    <article class="dept-contact-card">
+                        <h3>⚙️ Mechanical</h3>
+                        <p><strong>HOD:</strong> Dr. Amit</p>
+                        <p><strong>Email:</strong> mech@auracollege.edu</p>
+                        <p><strong>Phone:</strong> +91 80 1234 5683</p>
+                    </article>
+                    <article class="dept-contact-card">
+                        <h3>🏗️ Civil</h3>
+                        <p><strong>HOD:</strong> Mr. Reddy</p>
+                        <p><strong>Email:</strong> civil@auracollege.edu</p>
+                        <p><strong>Phone:</strong> +91 80 1234 5684</p>
+                    </article>
+                    <article class="dept-contact-card">
+                        <h3>🔌 Electrical</h3>
+                        <p><strong>HOD:</strong> Dr. Vikram</p>
+                        <p><strong>Email:</strong> eee@auracollege.edu</p>
+                        <p><strong>Phone:</strong> +91 80 1234 5685</p>
+                    </article>
+                    <article class="dept-contact-card">
+                        <h3>🖥️ Information Tech</h3>
+                        <p><strong>HOD:</strong> Dr. Meera Krishnan</p>
+                        <p><strong>Email:</strong> it@auracollege.edu</p>
+                        <p><strong>Phone:</strong> +91 80 1234 5686</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+   <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Aura Institute of Technology</h3>
+                    <p>123 University Avenue<br>Tech City, Tamil Nadu - 638502<br>India</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><strong>Phone:</strong> +91 93 1234 5678<br><strong>Email:</strong> info@auracollege.edu<br><strong>Admissions:</strong> admissions@auracollege.edu</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="records.html">Student Records</a></li>
+                        <li><a href="add-student.html">Add Student</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><img src="/Images/facebook.svg" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="/Images/twitter-x.svg" alt="Twitter"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="/Images/linkedin.svg" alt="LinkedIn"></a>
+                        <a href="#" aria-label="Instagram"><img src="/Images/instagram.svg" alt="Instagram"></a>
+                        <a href="#" aria-label="YouTube"><img src="/Images/youtube.svg" alt="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aura Institute of Technology. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/storage.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/records.js"></script>
+    <script src="/js/contact.js"></script>
+</body>
+</html>

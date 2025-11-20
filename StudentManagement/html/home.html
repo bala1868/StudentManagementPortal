@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records Management - Home</title>
+    <link rel="stylesheet" href="/assets/css/base-style.css">
+    <link rel="stylesheet" href="/assets/css/countdown.css">
+    <link rel="stylesheet" href="/assets/css/feature.css">
+    <link rel="stylesheet" href="/assets/css/intro.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/carousal.css">
+    <link rel="stylesheet" href="/assets/css/base-style.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/buttons.css">
+    <link rel="stylesheet" href="/assets/css/main-content.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/assets/Images/collegelogo.jfif" alt="College Logo">
+                <span><a href="home.html">Student Management Portal</a></span>
+            </div>
+           
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html" class="nav-link active">Home</a></li>
+                <li><a href="records.html" class="nav-link">Student Records</a></li>
+                <li><a href="add-student.html" class="nav-link">Add Student</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Carousel Section -->
+        <section class="hero-carousel">
+            <div class="hero-content">
+                <h1 class="hero-title">Manage Student Records Efficiently</h1>
+                <p class="hero-subtitle">Streamline your academic administration</p>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-slide active">
+                    <img src="/assets/Images/libraray.jfif" alt="Campus Library">
+                    <div class="carousel-caption">
+                        <h2>Campus Library</h2>
+                        <p>Modern learning resources and study spaces</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="/assets/Images/ece.avif" alt="ECE Block">
+                    <div class="carousel-caption">
+                        <h2>ECE Department Block</h2>
+                        <p>State-of-the-art electronics laboratories</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="/assets/Images/photo-1607237138185-eedd9c632b0b.avif" alt="Main Campus">
+                    <div class="carousel-caption">
+                        <h2>Main Campus Building</h2>
+                        <p>Excellence in education since 1985</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="/assets/Images/sports.avif" alt="Sports Complex">
+                    <div class="carousel-caption">
+                        <h2>Sports Complex</h2>
+                        <p>Promoting physical fitness and teamwork</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="introduction-section">
+            <div class="container">
+                <h2>Welcome to Our Student Management System</h2>
+                <p class="intro-text">
+                    Our <strong>Student Record Management System</strong> is designed to provide a 
+                    <em>seamless and efficient</em> way to manage student information. Whether you're 
+                    looking to <strong>view existing records</strong>, <em>add new students</em>, or 
+                    <strong>track academic performance</strong>, our platform offers an intuitive 
+                    interface that makes administration simple and effective.
+                </p>
+                <p class="intro-text">
+                    Built with <em>modern web technologies</em>, the system ensures <strong>data accuracy</strong>, 
+                    easy access, and comprehensive record-keeping capabilities for educational institutions.
+                </p>
+            </div>
+        </section>
+
+        <!-- Features Grid Section -->
+        <section class="features-section">
+            <div class="container">
+                <h2>System Features</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Comprehensive Records</h3>
+                        <p>Access detailed student information including grades, contact details, and academic history all in one place.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Advanced Search</h3>
+                        <p>Quickly find student records using powerful search and filter capabilities by department, name, or ID.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">📝</div>
+                        <h3>Easy Data Entry</h3>
+                        <p>Add new student records effortlessly with our intuitive form interface and validation system.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Mobile Responsive</h3>
+                        <p>Access the system from any device - desktop, tablet, or smartphone with full functionality.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🎓</div>
+                        <h3>Performance Tracking</h3>
+                        <p>Monitor student academic performance and identify top performers across all departments.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Secure & Reliable</h3>
+                        <p>Your data is stored securely with local storage backup and reliable data management.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enrollment Countdown Section -->
+        <section class="countdown-section">
+            <div class="container">
+                <h2>Next Semester Enrollment</h2>
+                <div class="countdown-timer" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Get Started Today</h2>
+                <p>Access student records or add new entries to the system</p>
+                <div class="cta-buttons">
+                    <a href="records.html" class="btn btn-primary">View Records</a>
+                    <a href="add-student.html" class="btn btn-secondary">Add Student</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Aura Institute of Technology</h3>
+                    <p>123 University Avenue<br>Tech City, Tamil Nadu - 638502<br>India</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><strong>Phone:</strong> +91 93 1234 5678<br><strong>Email:</strong> info@auracollege.edu<br><strong>Admissions:</strong> admissions@auracollege.edu</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="records.html">Student Records</a></li>
+                        <li><a href="add-student.html">Add Student</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><img src="/assets/Images/facebook.svg" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="/assets/Images/twitter-x.svg" alt="Twitter"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="/assets/Images/linkedin.svg" alt="LinkedIn"></a>
+                        <a href="#" aria-label="Instagram"><img src="/assets/Images/instagram.svg" alt="Instagram"></a>
+                        <a href="#" aria-label="YouTube"><img src="/assets/Images/youtube.svg" alt="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aura Institute of Technology. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+  <!-- <script src="/js/script.js"></script> -->
+  <script src="/js/carousal.js"></script><script src="/js/nav.js"></script><script src="/js/counter.js"></script>
+    <script src="/js/storage.js"></script>
+    <!-- <script src="/js/nav.js"></script><script src="/js/records.js"></script> -->
+</body>
+</html>

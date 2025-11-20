@@ -1,0 +1,258 @@
+/* ==================== FOOTER ==================== */
+.footer {
+    background: var(--surface-color);
+    border-top: 2px solid var(--border-color);
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.footer-section p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 0.9375rem;
+}
+
+.footer-section p strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* ==================== FOOTER QUICK LINKS ==================== */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all var(--transition-base);
+    position: relative;
+    padding-left: 1.25rem;
+}
+
+.footer-links a::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    transition: all var(--transition-base);
+    opacity: 0;
+    transform: translateX(-5px);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+    padding-left: 1.5rem;
+    transform: translateX(3px);
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ==================== SOCIAL ICONS ==================== */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: var(--bg-color);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icons a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    z-index: 0;
+}
+
+.social-icons a:hover::before {
+    opacity: 1;
+}
+
+.social-icons a div {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.social-icons a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all var(--transition-base);
+}
+
+/* Light mode - darker icons */
+[data-theme="light"] .social-icons a img {
+    filter: brightness(0) saturate(100%) invert(29%) sepia(8%) saturate(1453%) hue-rotate(184deg) brightness(95%) contrast(88%);
+}
+
+[data-theme="light"] .social-icons a:hover img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+/* Dark mode - lighter icons */
+[data-theme="dark"] .social-icons a img {
+    filter: brightness(0) saturate(100%) invert(79%) sepia(8%) saturate(486%) hue-rotate(182deg) brightness(95%) contrast(90%);
+}
+
+[data-theme="dark"] .social-icons a:hover img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px) scale(1.05);
+    border-color: transparent;
+    box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
+}
+
+/* Individual social icon colors on hover */
+.social-icons a[aria-label="Facebook"]:hover::before {
+    background: linear-gradient(135deg, #1877f2, #0c63d4);
+}
+
+.social-icons a[aria-label="Twitter"]:hover::before {
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+}
+
+.social-icons a[aria-label="LinkedIn"]:hover::before {
+    background: linear-gradient(135deg, #0077b5, #005885);
+}
+
+.social-icons a[aria-label="Instagram"]:hover::before {
+    background: linear-gradient(135deg, #e4405f, #c13584);
+}
+
+.social-icons a[aria-label="YouTube"]:hover::before {
+    background: linear-gradient(135deg, #ff0000, #cc0000);
+}
+
+/* ==================== FOOTER BOTTOM ==================== */
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+
+    .footer-links a {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 1.5rem 0 1rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1rem;
+    }
+
+    .footer-section p {
+        font-size: 0.875rem;
+    }
+
+    .social-icons a {
+        width: 38px;
+        height: 38px;
+    }
+
+    .social-icons a div {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* ==================== ANIMATION ==================== */
+@keyframes footerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-section {
+    animation: footerFadeIn 0.6s ease-out backwards;
+}
+
+.footer-section:nth-child(1) { animation-delay: 0.1s; }
+.footer-section:nth-child(2) { animation-delay: 0.2s; }
+.footer-section:nth-child(3) { animation-delay: 0.3s; }
+.footer-section:nth-child(4) { animation-delay: 0.4s; }

@@ -1,0 +1,125 @@
+/* ==================== IMAGE UPLOAD STYLES ==================== */
+
+.image-upload-container {
+    margin-bottom: 15px;
+}
+
+.form-input-file {
+    display: none;
+}
+
+.file-upload-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(102, 126, 234, 0.2);
+}
+
+.file-upload-label:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(102, 126, 234, 0.3);
+}
+
+.file-upload-label svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Image Preview Container */
+.image-preview-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px dashed #e0e0e0;
+    border-radius: 12px;
+    text-align: center;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.image-preview-container:hover {
+    border-color: #667eea;
+    background: #f5f7ff;
+}
+
+.image-preview {
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid white;
+}
+
+.btn-remove-image {
+    padding: 8px 16px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-remove-image:hover {
+    background: #e84118;
+    transform: scale(1.05);
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .image-preview-container {
+    background: #2d2d2d;
+    border-color: #444;
+}
+
+[data-theme="dark"] .image-preview-container:hover {
+    border-color: #667eea;
+    background: #353535;
+}
+
+[data-theme="dark"] .file-upload-label {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .file-upload-label {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+    }
+    
+    .image-preview {
+        max-width: 150px;
+        max-height: 150px;
+    }
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.image-preview-container.loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}

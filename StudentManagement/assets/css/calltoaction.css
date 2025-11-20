@@ -1,0 +1,11 @@
+.cta-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}

@@ -1,0 +1,94 @@
+/* ==================== COMPLETE TABLE.CSS ==================== */
+
+.table-container {
+    overflow-x: auto;
+    background: var(--bg-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.student-table thead {
+    background: var(--primary-color);
+    color: white;
+}
+
+.student-table th,
+.student-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.student-table th {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.student-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.student-table tbody tr {
+    transition: var(--transition);
+}
+
+.student-table tbody tr:nth-child(even) {
+    background: var(--bg-secondary);
+}
+
+.student-table tbody tr:hover {
+    background: rgba(37, 99, 235, 0.1);
+}
+
+.student-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Ensure action column has enough space */
+.student-table th:last-child,
+.student-table td:last-child {
+    min-width: 200px;
+    text-align: center;
+}
+
+.no-records {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-light);
+}
+
+/* ==================== RESPONSIVE TABLE ==================== */
+@media (max-width: 768px) {
+    .student-table th:last-child,
+    .student-table td:last-child {
+        min-width: 150px;
+    }
+    
+    .student-table th,
+    .student-table td {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .student-table th,
+    .student-table td {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .student-photo {
+        width: 40px;
+        height: 40px;
+    }
+}
